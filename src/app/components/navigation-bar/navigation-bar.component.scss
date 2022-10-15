@@ -1,0 +1,60 @@
+@use '@angular/material' as mat;
+
+.nav-bar {
+    // Color of Text
+    color: rgb(252, 252, 252);
+
+    // Adding Shadow below nav bar
+    @include mat.elevation(8);
+
+    // Frosted Background color
+    //background-color: rgba(69, 69, 69, 0.70);
+    background-color: rgba(1, 135, 21, 0.7);
+    backdrop-filter: saturate(180%) blur(20px);
+
+    // Make Nav Bar stay on top of screen
+    position: sticky;
+    top: -1px;
+    z-index: 100;
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    height: 55px;
+}
+
+
+.logo {
+    padding-top: .45rem;
+    padding-right: .5rem; 
+    font-weight: 420;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: rgb(220, 220, 220);
+}
+
+// On Hover
+.nav-button:hover {
+    transition: all .3s ease-in;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+
+.spacer {
+    // push content to the right side
+    flex: 1 1 auto;
+}
+
+a{
+    text-decoration: none;
+    color: var(--mainTextColor);
+    font-weight: 500;
+    transition: 0.3s;   
+}
+
+a:hover{
+    color: var(--mainTextColor)
+}
