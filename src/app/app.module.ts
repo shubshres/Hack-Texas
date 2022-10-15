@@ -26,6 +26,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+//import for Stepper
+import {MatStepperModule} from '@angular/material/stepper';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +44,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   ],
   imports: [
     BrowserModule,
+    MatStepperModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule, 
