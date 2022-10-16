@@ -17,6 +17,7 @@ import { RepairShopsComponent } from './components/repair-shops/repair-shops.com
 import { SellComponent } from './components/sell/sell.component';
 import { ShopComponent } from './components/shop/shop.component';
 
+
 const routes: Routes = [
   { path: 'sell', component: SellComponent },
   { path: 'shop', redirectTo: '/shop/pcs', pathMatch: 'full'},

@@ -48,6 +48,11 @@ import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 
+//import for Stepper
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +78,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
   ],
   imports: [
     BrowserModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatFormFieldModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule, 
