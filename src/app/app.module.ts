@@ -52,6 +52,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     PhonesComponent,
     TabletsComponent,
     KeyboardsComponent,
-    MiceComponent, 
+    MiceComponent,
+    ProductDetailsComponent, 
   ],
   imports: [
     BrowserModule,

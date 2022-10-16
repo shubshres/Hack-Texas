@@ -43,3 +43,7 @@
     margin: 2px;
 }
 
+
+:host ::ng-deep .mat-form-field-flex {
+  background: transparent;
+}

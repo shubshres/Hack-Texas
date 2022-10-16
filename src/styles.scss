@@ -43,3 +43,7 @@ mat-dialog-container {
 ::ng-deep mat-button-toggle-group{
   outline: none;
 }
+
+    .mat-select-value-text {
+  color: black !important;
+}

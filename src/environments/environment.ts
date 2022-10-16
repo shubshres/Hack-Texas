@@ -6,19 +6,19 @@ import { getAnalytics } from 'firebase/analytics';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: 'AIzaSyA_ygZQfbQFiXZM-jXlU2kL9tAO2rd9zL0',
-  authDomain: 'recell-ac9ee.firebaseapp.com',
-  projectId: 'recell-ac9ee',
-  storageBucket: 'recell-ac9ee.appspot.com',
-  messagingSenderId: '614834387955',
-  appId: '1:614834387955:web:3da185e616083a462d3086',
-  measurementId: 'G-DD3JETN19R',
-};
+// const firebaseConfig = {
+//   apiKey: 'AIzaSyA_ygZQfbQFiXZM-jXlU2kL9tAO2rd9zL0',
+//   authDomain: 'recell-ac9ee.firebaseapp.com',
+//   projectId: 'recell-ac9ee',
+//   storageBucket: 'recell-ac9ee.appspot.com',
+//   messagingSenderId: '614834387955',
+//   appId: '1:614834387955:web:3da185e616083a462d3086',
+//   measurementId: 'G-DD3JETN19R',
+// };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app); 
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app); 
 
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.

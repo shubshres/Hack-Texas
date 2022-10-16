@@ -1,31 +1,30 @@
-<p>sell works!</p>
 <mat-stepper class="sell-stepper">
   <mat-step>
-    <form>
+    <form [formGroup] = "SellerInfo" class="form">
       <ng-template matStepLabel>
-        <span [ngStyle]="{ color: 'black' }">Start</span>
+        <span [ngStyle]="{ color: 'black' }">Personal Information</span>
       </ng-template>
 
       <div class="form wrapper">
         <mat-form-field appearance="fill">
           <mat-label>First Name</mat-label>
-          <input matInput placeholder="First Name" />
+          <input matInput formControlName="firstName" placeholder="First Name" />
         </mat-form-field>
         <br />
         <mat-form-field appearance="fill">
           <mat-label>Last Name</mat-label>
-          <input matInput placeholder="Last Name" />
+          <input matInput formControlName="lastName" placeholder="Last Name" />
         </mat-form-field>
         <br />
         <mat-form-field appearance="fill">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="Email Address" />
+          <input matInput formControlName="email" placeholder="Email Address" />
         </mat-form-field>
 
         <br />
         <mat-form-field appearance="fill">
           <mat-label>Phone</mat-label>
-          <input matInput placeholder="Phone" />
+          <input matInput valformControlNameue="phoneNumber" placeholder="Phone" />
         </mat-form-field>
       </div>
     </form>
@@ -33,62 +32,49 @@
   </mat-step>
 
   <mat-step>
-    <form>
+    <form [formGroup]="ItemDetails">
       <ng-template matStepLabel>
-        <span [ngStyle]="{ color: 'black' }">Upload</span>
+        <span [ngStyle]="{ color: 'black' }">Product Information</span>
       </ng-template>
 
-      <mat-form-field appearance="fill" class="testest">
-        <mat-label>Enter your choice</mat-label>
-        <mat-select>
-          <mat-option value="one">First option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-        </mat-select>
-      </mat-form-field>
+      <div>
+        <mat-form-field appearance="fill" class="testest">
+          <mat-label>Enter your choice</mat-label>
+          <mat-select [(value)]="itemSelected" style="color: black">
+            <mat-option value="PC">Complete PC</mat-option>
+            <mat-option value="GPU">GPU</mat-option>
+            <mat-option value="Monitor">Monitor</mat-option>
+            <mat-option value="CPU">CPU</mat-option>
+            <mat-option value="RAM">RAM</mat-option>
+            <mat-option value="PowerSupply">Power Supply</mat-option>
+            <mat-option value="Storage">Storage</mat-option>
+            <mat-option value="Phone">Phones</mat-option>
+            <mat-option value="Tablet">Tablets</mat-option>
+            <mat-option value="Keyboard">Keyboards</mat-option>
+            <mat-option value="Mouse">Mouse</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" placeholder="Enter a Headline Here">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Item Description</mat-label>
+          <textarea matInput formControlName="details"></textarea>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Price</mat-label>
+          <input matInput formControlName = "price" placeholder="$0.00">
+        </mat-form-field>
+      </div>
     </form>
     <button mat-button matStepperPrevious class="step-previous">Back</button>
-    <button mat-button matStepperNext class="step-next">Next</button>
-  </mat-step>
-
-  <mat-step>
-    <ng-template matStepLabel>
-      <span [ngStyle]="{ color: 'black' }">Check</span>
-    </ng-template>
-    <form>
-      <mat-form-field>
-        <input matInput placeholder="City" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="State" />
-      </mat-form-field>
-    </form>
-    <button mat-button matStepperPrevious class="step-previous">Back</button>
-    <button mat-button matStepperNext class="step-next">Next</button>
-  </mat-step>
-
-  <mat-step label="Done">
-    <ng-template matStepLabel>
-      <span [ngStyle]="{ color: 'black' }">Finish</span>
-    </ng-template>
-    <form>
-      <mat-form-field>
-        <input matInput placeholder="Zip" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Phone" />
-      </mat-form-field>
-      <br />
-      <button mat-button matStepperPrevious class="step-previous">Back</button>
-      <button mat-button class="step-previous">Submit</button>
-    </form>
+    <button mat-button matStepperNext class="step-next" (click)="test()">Submit</button>
   </mat-step>
 </mat-stepper>
