@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "recell-ac9ee": {
+      "hosting": {
+        "Recell": [
+          "recell-ac9ee"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "recell-ac9ee"
+  }
+}

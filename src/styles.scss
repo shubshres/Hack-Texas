@@ -4,13 +4,14 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: var(--mainBgColor);  }
 
 :root{
-    --mainTextColor-light:rgb(255, 255, 255);
-    --secondaryTextColor-light:rgb(51 51 51);
-    --mainLinkColor-light:#0da2b8;
+    --mainTextColor-light:rgb(0, 0, 0);
+    --secondaryTextColor-light:rgb(85, 85, 85);
+    --mainLinkColor-light:#17a900;
     --mainBorderColor-light:rgb(218, 218, 218);
-    --mainBgColor-light:rgb(249, 250,251);
+    --mainBgColor-light:rgb(220, 220, 220);
+    --secondaryBgColor-light:rgb(195, 193, 193);
 
-    --mainTextColor-dark:#fff;
+    --mainTextColor-dark:rgb(0, 0, 0);
     --secondaryTextColor-dark:#adb0b1;
     --mainLinkColor-dark:rgb(30, 190,214);
     --mainBorderColor-dark:#2b3031;
@@ -21,10 +22,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
     --mainLinkColor:var(--mainLinkColor-light);
     --mainBorderColor:var(--mainBorderColor-light);
     --mainBgColor:var(--mainBgColor-light);
+    --secondaryBgColor:var(--secondaryBgColor-light)
 
 }
 
 mat-dialog-container {
     background-color: rgb(21, 21, 21) !important;
     border-radius: 15px !important;
+}
+
+.mat-drawer-container {
+    background-color: var(--mainBgColor);
+    color: var(--mainTextColor);
+    .mat-drawer{
+        background-color: var(--secondaryBgColor);
+        color: var(--mainTextColor);
+    }
+}
+
+::ng-deep mat-button-toggle-group{
+  outline: none;
 }

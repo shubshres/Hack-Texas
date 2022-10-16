@@ -1,1 +1,33 @@
-<p>shop works!</p>
+<mat-drawer-container style="min-height: 100%">
+    <!-- Drawer Content -->
+    <mat-drawer mode="side" class="filter-content" opened>
+        <div>
+            <h2>Items</h2>
+            <div fxLayout="column" name="item" fxLayoutAlign="start start" style="padding-left: 2.25rem">
+                <button class="filter-button" [ngClass]="[pcClick]" [disableRipple]="true" (click)="showPCs()" value="CompletePC" mat-flat-button>Complete PCs</button>
+                <button class="filter-button" [ngClass]="[gpuClick]" [disableRipple]="true" (click)="showGPUs()" value="GPU" mat-flat-button>GPUs</button>
+                <button class="filter-button" [ngClass]="[monitorClick]" [disableRipple]="true" (click)="showMonitors()" value="Monitors" mat-flat-button>Monitors</button>
+                <button class="filter-button" [ngClass]="[cpuClick]" [disableRipple]="true" (click)="showCPUs()" value="CPU" mat-flat-button>CPUs</button>
+                <button class="filter-button" [ngClass]="[ramClick]" [disableRipple]="true" (click)="showRAM()" value="RAM" mat-flat-button>RAM</button>
+                <button class="filter-button" [ngClass]="[powerSupplyClick]" [disableRipple]="true" (click)="showPowerSupplies()" value="PowerSupply" mat-flat-button>Power Supplies</button>
+                <button class="filter-button" [ngClass]="[storageClick]" [disableRipple]="true" (click)="showStorage()" value="Storage" mat-flat-button>SSDs/HDDs</button>
+                <button class="filter-button" [ngClass]="[phonesClick]" [disableRipple]="true" (click)="showPhones()" value="Phones" mat-flat-button>Phones</button>
+                <button class="filter-button" [ngClass]="[tabletsClick]" [disableRipple]="true" (click)="showTablets()" value="Tablets" mat-flat-button>Tablets</button>
+                <button class="filter-button" [ngClass]="[keyboardsClick]" [disableRipple]="true" (click)="showKeyboards()" value="Keyboards" mat-flat-button>Keyboards</button>
+                <button class="filter-button" [ngClass]="[miceClick]" [disableRipple]="true" (click)="showMice()" value="Mice" mat-flat-button>Mice</button>
+            </div>
+        </div>
+        <div>
+            <h2>Condition</h2>
+            <div fxLayout="column" name="condition" fxLayoutAlign="start start" style="padding-left: 2.25rem">
+                <button class="filter-button" [ngClass]="[btnStyle]" [disableRipple]="true" value="new" mat-flat-button>New</button>
+                <button class="filter-button" [ngClass]="[btnStyle]" [disableRipple]="true" value="old" mat-flat-button>Used</button>
+                <button class="filter-button" [ngClass]="[btnStyle]" [disableRipple]="true" value="fixer" mat-flat-button>Fixer Upper</button>
+            </div>
+        </div>
+    </mat-drawer>
+
+    <!-- main code  -->
+    <mat-drawer-content>
+    </mat-drawer-content>
+</mat-drawer-container>
