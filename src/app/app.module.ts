@@ -28,7 +28,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 //import for Stepper
 import {MatStepperModule} from '@angular/material/stepper';
-
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,8 @@ import {MatStepperModule} from '@angular/material/stepper';
   imports: [
     BrowserModule,
     MatStepperModule,
+    MatSelectModule,
+    MatFormFieldModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule, 

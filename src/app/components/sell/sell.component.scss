@@ -1,0 +1,45 @@
+::ng-deep mat-label{
+    color: black;
+}
+::ng-deep mat-select-trigger{
+    color: black;
+}
+::ng-deep .testtest{
+    margin-bottom: 5vh;
+}
+
+::ng-deep .mat-form-field-infix {
+    border-bottom: 1px solid rgb(68, 68, 68);
+}
+
+.mat-form-field-infix ::placeholder{
+    color: black;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+  background-color: black;
+}   
+
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+    background-color: #008826; 
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: #008826; 
+}
+
+.sell-stepper{
+    background-color: #F9FAFB;
+  // background-color: lightgray;
+    margin-top: 5vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.step-next,
+.step-previous{
+    border: 1px solid black;
+    margin: 2px;
+}
+

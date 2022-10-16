@@ -1,1 +1,94 @@
 <p>sell works!</p>
+<mat-stepper class="sell-stepper">
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>
+        <span [ngStyle]="{ color: 'black' }">Start</span>
+      </ng-template>
+
+      <div class="form wrapper">
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First Name" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email Address" />
+        </mat-form-field>
+
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Phone</mat-label>
+          <input matInput placeholder="Phone" />
+        </mat-form-field>
+      </div>
+    </form>
+    <button mat-button matStepperNext class="step-next">Next</button>
+  </mat-step>
+
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>
+        <span [ngStyle]="{ color: 'black' }">Upload</span>
+      </ng-template>
+
+      <mat-form-field appearance="fill" class="testest">
+        <mat-label>Enter your choice</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    <button mat-button matStepperPrevious class="step-previous">Back</button>
+    <button mat-button matStepperNext class="step-next">Next</button>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>
+      <span [ngStyle]="{ color: 'black' }">Check</span>
+    </ng-template>
+    <form>
+      <mat-form-field>
+        <input matInput placeholder="City" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="State" />
+      </mat-form-field>
+    </form>
+    <button mat-button matStepperPrevious class="step-previous">Back</button>
+    <button mat-button matStepperNext class="step-next">Next</button>
+  </mat-step>
+
+  <mat-step label="Done">
+    <ng-template matStepLabel>
+      <span [ngStyle]="{ color: 'black' }">Finish</span>
+    </ng-template>
+    <form>
+      <mat-form-field>
+        <input matInput placeholder="Zip" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Phone" />
+      </mat-form-field>
+      <br />
+      <button mat-button matStepperPrevious class="step-previous">Back</button>
+      <button mat-button class="step-previous">Submit</button>
+    </form>
+  </mat-step>
+</mat-stepper>
