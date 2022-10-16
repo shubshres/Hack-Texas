@@ -1,0 +1,57 @@
+.filter-content{
+    background-color: var(--secondaryBgColor-light);
+    width: 15%;
+
+    h2{
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+.search{
+    padding-top: 2rem;
+    border-radius: 28px 0 0 28px !important;
+    min-width: 28px !important;
+    height: 2.5rem;
+    color: black !important; 
+
+}
+
+.filter-button{
+    color: var(--secondaryTextColor);
+    background-color: transparent;
+    font-weight: 300;
+    transition: 0.3s;
+    outline-color: transparent;
+}
+
+.filter-button-clicked{
+    color: var(--mainLinkColor);
+    background-color: transparent;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.filter-button:hover {
+    transition: all .3s ease-in;
+    background-color: transparent;
+    color: var(--mainLinkColor)
+}
+
+.card--project button{
+    color: var(--secondaryTextColor);
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.card--project button:hover{
+    color: var(--mainTextColor)
+}
+
+.pcClick, .gpuClick, .monitorClick, .cpuClick, .ramClick, .powerSupplyClick, .showClick, .phonesClick, .tabletsClick, .keyboardsClick, .miceClick{
+    color: var(--secondaryTextColor);
+    background-color: transparent;
+    font-weight: 300;
+    transition: 0.3s;
+    outline-color: transparent;
+}

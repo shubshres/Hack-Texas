@@ -106,6 +106,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Recell:build:production",
+            "firebaseProject": "recell-ac9ee",
+            "firebaseHostingSite": "recell-ac9ee"
+          }
         }
       }
     }
