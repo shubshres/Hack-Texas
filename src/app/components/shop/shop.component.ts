@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
+
 
 @Component({
   selector: 'app-shop',
@@ -22,7 +25,7 @@ export class ShopComponent implements OnInit {
   keyboardsClick = 'filter-button';
   miceClick = 'filter-button';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private dialog: MatDialog) {}
 
   ngOnInit(): void {
     if (this.router.url.includes('shop/pcs')) {
@@ -95,5 +98,14 @@ export class ShopComponent implements OnInit {
 
   showMice() {
     this.router.navigateByUrl('shop/mice');
+  }
+
+  openItem(): void {
+    const dialogRef = this.dialog.open(ProductDetailsComponent, {
+      width: '50%',
+      maxHeight: '50%',
+      panelClass: 'dialog-container-custom',
+      autoFocus: false,
+    });
   }
 }
